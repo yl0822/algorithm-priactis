@@ -1,11 +1,11 @@
 /**
  * Alipay.com Inc. Copyright (c) 2004-2020 All Rights Reserved.
  */
-package com.zl.aglo.cap2;
+package com.zl.aglo.topic1.cap2;
 
 import static com.zl.aglo.Builder.buildArray;
 import static com.zl.aglo.Printer.printArray;
-import static com.zl.aglo.cap1.数组典型处理.swap;
+import static com.zl.aglo.topic1.cap1.数组典型处理.swap;
 
 /**
  * @author zhenlong
@@ -25,6 +25,8 @@ public class 排序算法 {
                 }
             }
         }
+        System.out.println("--------- 冒泡排序后 --------");
+        printArray(ints);
         return ints;
     }
 }

@@ -1,14 +1,11 @@
 /**
  * Alipay.com Inc. Copyright (c) 2004-2020 All Rights Reserved.
  */
-package com.zl.aglo.cap1;
-
-import java.util.ArrayList;
-import java.util.HashSet;
+package com.zl.aglo.topic1.cap1;
 
 import static com.zl.aglo.Builder.buildArray;
-import static com.zl.aglo.cap1.数组典型处理.cat;
-import static com.zl.aglo.cap2.排序算法.bubbleSort;
+import static com.zl.aglo.Printer.printArray;
+import static com.zl.aglo.topic1.cap2.排序算法.bubbleSort;
 
 /**
  *
@@ -19,9 +16,10 @@ public class 二分查找 {
 
     public static void main(String[] args) {
         // 假设数组元素各不相同
-        System.out.println(traverseSearch(10, buildArray(100)));
-        System.out.println(traverseSearch(10, buildArray(100)));
-        System.out.println(binarySearch(10, buildArray(100)));
+        //System.out.println(traverseSearch(10, buildArray(100)));
+        //System.out.println(traverseSearch(10, buildArray(100)));
+        //System.out.println(binarySearch(10, buildArray(100)));
+        //printArray(distinct(buildArray(100)));
 
     }
 
@@ -41,6 +39,7 @@ public class 二分查找 {
         int low = 0;
         int high = ints.length;
         while (low <= high){
+            System.out.println("low="+low+",high="+high);
             int mid = low + (high - low) / 2;
             if (key < ints[mid]){
                 high = mid - 1;
