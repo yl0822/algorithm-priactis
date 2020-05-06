@@ -204,12 +204,74 @@ public class 基于链表实现的常用数据结构 {
         }
     }
 
+    static class LinkedList<T>{
+        private Node<T> first;
+        private Node<T> last;
+
+        public void add(T t){
+            final Node<T> l = last;
+            final Node<T> newNode = new Node<>(t);
+            last = newNode;
+            if (l == null)
+                first = newNode;
+            else
+                l.next = newNode;
+        }
+
+        @Override
+        public String toString() {
+            Node t = first;
+            StringBuilder sb = new StringBuilder();
+            while (t != null){
+                sb.append(",value="+t.value);
+                t = t.next;
+            }
+            return sb.toString();
+        }
+
+        public static void main(String[] args) {
+            LinkedList<String> linkedList = new LinkedList<>();
+            linkedList.add("1");
+            linkedList.add("2");
+            linkedList.add("3");
+            linkedList.add("4");
+            linkedList.add("5");
+            System.out.println(linkedList);
+            linkedList.revert();
+            System.out.println(linkedList);
+        }
+
+        public void revert(){
+            Node pre = null;
+            Node cursor = first;
+            while (cursor != null){
+                Node next = cursor.next;
+                cursor.next = pre;
+                pre = cursor;
+                cursor = next;
+            }
+            first = pre;
+        }
+    }
+
     static class Node<T>{
         private T value;
         private Node<T> next;
 
         public Node(T value) {
             this.value = value;
+        }
+
+        @Override
+        public String toString() {
+
+            StringBuilder sb = new StringBuilder();
+            Node cur = this;
+            while (cur != null){
+                sb.append(",value="+value);
+                cur = next;
+            }
+            return sb.toString();
         }
     }
 }

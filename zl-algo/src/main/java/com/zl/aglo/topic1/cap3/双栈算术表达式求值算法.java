@@ -3,7 +3,14 @@
  */
 package com.zl.aglo.topic1.cap3;
 
+import org.apache.commons.lang3.StringUtils;
+
+import java.util.ArrayDeque;
+import java.util.Arrays;
+import java.util.Deque;
+import java.util.Queue;
 import java.util.Stack;
+import java.util.concurrent.ArrayBlockingQueue;
 
 /**
  *
@@ -13,7 +20,8 @@ import java.util.Stack;
 public class 双栈算术表达式求值算法 {
 
     public static void main(String[] args) {
-        System.out.println(eval("((1 + ((2 * 3) * ( 9 / 3))) - 4)"));
+        //System.out.println(eval("((1 + ((2 * 3) * ( 9 / 3))) - 4)"));
+        System.out.println(complete("1+2)*3-4)*5-6)))"));
     }
 
     private static int eval(String str){
@@ -40,5 +48,20 @@ public class 双栈算术表达式求值算法 {
             }
         }
         return vals.pop();
+    }
+
+    private static String complete(String str){
+        Stack<Character> ops = new Stack<>();
+        Deque<String> vals = new ArrayDeque<>(30);
+        for (char c : str.toCharArray()) {
+            if (c == '+' || c == '-' || c == '*' || c == '/'){
+                ops.push(c);
+            }else if (c == ')'){
+                vals.addLast("("+vals.pollFirst()+ops.pop()+vals.pollFirst()+")");
+            }else {
+                vals.addLast(String.valueOf(c));
+            }
+        }
+        return vals.peek();
     }
 }
