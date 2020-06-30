@@ -3,13 +3,13 @@
  */
 package com.zl.aglo.practis.control;
 
-import com.algo.practis.base.model.TreeNode;
+import com.zl.aglo.practis.base.model.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-import static com.algo.practis.base.TreeUtils.COMMON_TREE;
+import static com.zl.aglo.practis.base.TreeUtils.COMMON_TREE;
 
 /**
  * @author zhenlong

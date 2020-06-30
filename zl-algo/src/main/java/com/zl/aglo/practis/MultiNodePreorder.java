@@ -3,7 +3,8 @@
  */
 package com.zl.aglo.practis;
 
-import com.algo.practis.base.model.MultiNode;
+
+import com.zl.aglo.practis.base.model.MultiNode;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;

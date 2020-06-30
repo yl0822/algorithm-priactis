@@ -3,7 +3,7 @@
  */
 package com.zl.aglo.practis.base;
 
-import com.algo.practis.base.model.ListNode;
+import com.zl.aglo.practis.base.model.ListNode;
 
 import java.util.Arrays;
 

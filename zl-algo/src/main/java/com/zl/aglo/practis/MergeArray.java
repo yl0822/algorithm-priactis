@@ -3,8 +3,8 @@
  */
 package com.zl.aglo.practis;
 
-import static com.algo.practis.base.ArrayUtils.buildArray;
-import static com.algo.practis.base.Printer.printArray;
+import static com.zl.aglo.practis.base.ArrayUtils.buildArray;
+import static com.zl.aglo.practis.base.Printer.printArray;
 
 /**
  * @author zhenlong

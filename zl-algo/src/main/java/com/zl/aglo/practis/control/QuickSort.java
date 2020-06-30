@@ -3,8 +3,8 @@
  */
 package com.zl.aglo.practis.control;
 
-import com.algo.practis.base.ArrayUtils;
-import com.algo.practis.base.Printer;
+import com.zl.aglo.practis.base.ArrayUtils;
+import com.zl.aglo.practis.base.Printer;
 
 /**
  * @author zhenlong
@@ -18,7 +18,7 @@ public class QuickSort {
         Printer.printArray(ints);
     }
 
-    private static void quickSort(int[] ints, int low, int high) {
+    public static void quickSort(int[] ints, int low, int high) {
         if (low >= high) {
             return;
         }

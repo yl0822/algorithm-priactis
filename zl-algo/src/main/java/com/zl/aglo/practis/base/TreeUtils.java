@@ -3,8 +3,8 @@
  */
 package com.zl.aglo.practis.base;
 
-import com.algo.practis.base.model.TreeNode;
-import com.algo.practis.control.ThreeOrderTraversal;
+import com.zl.aglo.practis.base.model.TreeNode;
+import com.zl.aglo.practis.control.ThreeOrderTraversal;
 
 /**
  * @author zhenlong

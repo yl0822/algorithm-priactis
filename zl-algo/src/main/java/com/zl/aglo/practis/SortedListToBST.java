@@ -3,8 +3,8 @@
  */
 package com.zl.aglo.practis;
 
-import com.algo.practis.base.model.ListNode;
-import com.algo.practis.base.model.TreeNode;
+import com.zl.aglo.practis.base.model.ListNode;
+import com.zl.aglo.practis.base.model.TreeNode;
 
 /**
  * @author zhenlong

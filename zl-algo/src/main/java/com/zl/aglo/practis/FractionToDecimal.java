@@ -3,20 +3,17 @@
  */
 package com.zl.aglo.practis;
 
-import org.aspectj.lang.annotation.Aspect;
-
 /**
  * @author zhenlong
  * @version $Id: FractionToDecimal.java, val 0.1 2020年05月10日 1:14 PM zhenlong Exp $
  */
-@Aspect
 public class FractionToDecimal {
 
     public static String fractionToDecimal(int numerator, int denominator) {
         return fraction(numerator, denominator, 0);
     }
 
-    private static String fraction(int numerator, int denominator, int i){
+    private static String fraction(int numerator, int denominator, int i) {
         StringBuilder sb = new StringBuilder();
         int div = numerator / denominator;
         int left = numerator % denominator;
@@ -27,7 +24,7 @@ public class FractionToDecimal {
             return "(" + div + ")";
         }
         sb.append(div);
-        if (i == 0){
+        if (i == 0) {
             sb.append(".");
         }
         sb.append(fraction(left * 10, denominator, ++i));

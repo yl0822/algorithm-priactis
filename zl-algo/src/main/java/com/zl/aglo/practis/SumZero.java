@@ -3,7 +3,7 @@
  */
 package com.zl.aglo.practis;
 
-import com.algo.practis.base.Printer;
+import com.zl.aglo.practis.base.Printer;
 
 /**
  *

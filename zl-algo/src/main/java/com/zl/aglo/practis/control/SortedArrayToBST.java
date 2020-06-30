@@ -3,7 +3,7 @@
  */
 package com.zl.aglo.practis.control;
 
-import com.algo.practis.base.model.TreeNode;
+import com.zl.aglo.practis.base.model.TreeNode;
 
 /**
  *
